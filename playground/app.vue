@@ -15,6 +15,12 @@ const providers = computed(() => [
     icon: 'i-simple-icons-facebook',
   },
   {
+    label: session.value.user?.x || 'X',
+    to: '/auth/x',
+    disabled: Boolean(user.value?.x),
+    icon: 'i-simple-icons-x',
+  },
+  {
     label: session.value.user?.github || 'GitHub',
     to: '/auth/github',
     disabled: Boolean(user.value?.github),
